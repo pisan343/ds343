@@ -18,15 +18,15 @@ void arrOnStack() {
   cout << "* Array on stack" << endl;
   int arr[5] = {10, 20, 30, 40, 50};
   cout << "Array address: " << arr << endl;
-  unsigned long first = (unsigned long)&arr[0];
-  unsigned long second = (unsigned long)&arr[1];
+  u_int64_t first = (u_int64_t)&arr[0];
+  u_int64_t second = (u_int64_t)&arr[1];
   cout << "First element address: " << first;
   cout << " or " << std::hex << first << " in hex" << std::dec << endl;
   cout << "Second element address: " << second;
   cout << " or " << std::hex << second << " in hex" << std::dec << endl;
   // Integers are 4 bytes on most systems, 32 bits
   cout << "Each integer is " << (second - first) << " bytes" << endl;
-  unsigned long last = first + 4 * sizeof(int);
+  u_int64_t last = first + 4 * sizeof(int);
   int *lastElement = (int *)last;
   cout << "Last element address: " << lastElement << endl;
   cout << "Last element value: " << *lastElement << endl;
