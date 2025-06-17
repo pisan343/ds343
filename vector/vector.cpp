@@ -5,6 +5,8 @@
 
 using namespace std;
 
+bool isEven(int x) { return x % 2 == 0; }
+
 void vectorOps() {
   // Using std::vector
   cout << "* Vector using std::vector" << endl;
@@ -34,6 +36,7 @@ void vectorOps() {
   // True if all elements are even
   bool allEven =
       all_of(vec.begin(), vec.end(), [](int x) { return x % 2 == 0; });
+  assert(allEven == all_of(vec.begin(), vec.end(), isEven));
 
   // For sorted vectors, we can use binary search
   sort(vec.begin(), vec.end()); // Ensure the vector is sorted
@@ -74,8 +77,34 @@ void objectInVector() {
   cout << "After modifying a0.x, vecA[0].x = " << vecA[0].x << endl;
 }
 
+void vectorAsMap() {
+  // ASCII values go from 0-255
+  // a-z correspond to 97-122
+  // A-Z correspond to 65-90
+  vector<int> freq(256);
+  string text = "An example text, with ASCII characters. @@!!&&##";
+  for (char c : text) {
+    freq[c]++;
+  }
+  cout << "* Frequency map using vector" << endl;
+  char mostFrequent = ' ';
+  int maxFreq = 0;
+  for (char c = 'a'; c <= 'z'; c++) {
+    if (freq[c] > 0) {
+      cout << c << ": " << freq[c] << endl;
+    }
+    if (freq[c] > maxFreq) {
+      maxFreq = freq[c];
+      mostFrequent = c;
+    }
+  }
+  cout << "Most frequent character: " << mostFrequent
+       << " with frequency: " << maxFreq << endl;
+}
+
 int main() {
   vectorOps();
   objectInVector();
+  vectorAsMap();
   return 0;
 }
