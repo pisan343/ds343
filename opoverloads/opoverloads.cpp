@@ -52,7 +52,16 @@ A operator++(A &a, int) {
   return temp;
 }
 
-void operator+=(A &a1, const A &a2) { a1.x += a2.x; }
+// Overloading the += operator
+// Should return a reference to the left operand
+// to allow chaining like a1 += a2 += a3;
+// This is a common pattern in C++ operator overloading.
+// If it returned a copy, it would not allow chaining.
+// Returning a reference allows the left operand to be modified directly.
+A &operator+=(A &a1, const A &a2) {
+  a1.x += a2.x;
+  return a1;
+}
 
 void opsOnA() {
   A a1(10);

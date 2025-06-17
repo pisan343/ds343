@@ -35,6 +35,7 @@ void basicMacros() {
   int total = 100;
   LOG(total);
 }
+
 int main() {
   basicPredefinedMacros();
   basicMacros();
