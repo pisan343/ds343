@@ -47,21 +47,27 @@ int heuristic(const string &node) {
 }
 
 int greedySearch(const string &start, const string &target) {
-  priority_queue<pair<int, string>, vector<pair<int, string>>, greater<>> pq;
+  // greedy cost is the heuristic cost to the target
+  // actual cost is not considered in greedy search
+  // <greedyCost, <actualCost, CityName>>
+  using pqs = pair<int, pair<int, string>>;
+  priority_queue<pqs, vector<pqs>, greater<>> pq;
   unordered_set<string> visited;
 
-  pq.push({heuristic(start), start});
+  // actual cost is 0
+  pq.push({heuristic(start), {0, start}});
 
   cout << "Greedy Search: Starting from " << start << " to " << target << endl;
   while (!pq.empty()) {
-    auto [currentCost, currentNode] = pq.top();
+    auto [heuristicEstimate, pr] = pq.top();
+    auto [actualCost, currentNode] = pr;
     pq.pop();
     cout << endl
-         << "Visiting: " << currentNode << " with cost: " << currentCost
-         << endl;
+         << "Visiting: " << currentNode << " Cost to get here: " << actualCost
+         << ", heuristic cost from here: " << heuristicEstimate << endl;
 
     if (currentNode == target) {
-      return currentCost; // Return the cost to reach the target
+      return actualCost; // Return the cost to reach the target
     }
 
     if (visited.count(currentNode)) {
@@ -72,7 +78,7 @@ int greedySearch(const string &start, const string &target) {
     for (const auto &[neighbor, weight] : graph.at(currentNode)) {
       cout << "Greedy: Considering neighbor: " << neighbor
            << " with heuristic cost: " << heuristic(neighbor) << endl;
-      pq.push({heuristic(neighbor), neighbor});
+      pq.push({heuristic(neighbor), {actualCost + weight, neighbor}});
     }
   }
   return -1; // Target not reachable
@@ -84,7 +90,7 @@ int aStar(const string &start, const string &target) {
   unordered_set<string> visited;
 
   gScore[start] = 0;
-  pq.push({heuristic(start), start});
+  pq.push({0 + heuristic(start), start});
 
   cout << "A* Search: Starting from " << start << " to " << target << endl;
   while (!pq.empty()) {
@@ -136,7 +142,8 @@ int main() {
   string target = "Bucharest";
   int greedyDistance = greedySearch(start, target);
   cout << "Greedy Search: Shortest distance from " << start << " to " << target
-       << " is " << greedyDistance << endl;
+       << " is " << greedyDistance << endl
+       << endl;
 
   int aStarDistance = aStar(start, target);
   cout << "A* Search: Shortest aStarDistance from " << start << " to " << target
