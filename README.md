@@ -1,6 +1,6 @@
 # Data Structures & Algorithms
 
-This repository is located at [https://github.com/pisan343/ds343]
+This repository is located at [https://github.com/pisan343/ds343]. The playlist for the videos is located [on YouTube](https://www.youtube.com/playlist?list=PLYzIJiM4zNFU-IlQvGE-UQQhYodp0c_8c)
 
 Videos, code and other resources for CSS 343 Data Structures and Algorithms taught at University at Washington Bothell
 
@@ -36,4 +36,15 @@ Videos, code and other resources for CSS 343 Data Structures and Algorithms taug
 11. Greedy Search / A-Star
     - [Video 20:07](https://youtu.be/mxP4DigPzS4?si=lkI0t59R5bHexEFb)
     - Code / Transcript / Key Points / Summary - [link](graph/)
-
+12. Minimum Spanning Tree - Prim's and Kruskal's Algorithm
+    - [Video xxx](xxx)
+    - Code / Transcript / Key Points / Summary - [link](minimum-spanning-tree/)
+13. Topological Sort
+    - [Video xxx](xxx)
+    - Code / Transcript / Key Points / Summary - [link](topological-sort/)
+14. Binary Numbers
+    - [Video xxx](xxx)
+    - Code / Transcript / Key Points / Summary - [link](binary-numbers/)
+15. Huffman
+    - [Video xxx](xxx)
+    - Code / Transcript / Key Points / Summary - [link](huffman/)
