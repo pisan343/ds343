@@ -4,8 +4,8 @@
 
 1. Setting up Docker
 2. Array
-    - Video [https://www.youtube.com/watch?v=cELn9S1vgGw]
-    - Code / Transcript / Key Points / Summary [link](arrays/)
+    - [Video](https://www.youtube.com/watch?v=cELn9S1vgGw)
+    - Code / Transcript / Key Points / Summary ([link])(arrays/)
 3. Vector
 4. Queue / Stack
 5. Priority Queue
