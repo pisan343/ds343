@@ -48,3 +48,12 @@ Videos, code and other resources for CSS 343 Data Structures and Algorithms taug
 15. Huffman
     - [Video xxx](xxx)
     - Code / Transcript / Key Points / Summary - [link](huffman/)
+16. Hashtable
+    - [Video xxx](xxx)
+    - Code / Transcript / Key Points / Summary - [link](hashtable/)
+17. Finite-State Automata
+    - [Video xxx](xxx)
+    - Code / Transcript / Key Points / Summary - [link](fsm/)
+18. Bitwise Operations
+    - [Video xxx](xxx)
+    - Code / Transcript / Key Points / Summary - [link](bitops/)
