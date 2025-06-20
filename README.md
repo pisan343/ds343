@@ -57,3 +57,6 @@ Videos, code and other resources for CSS 343 Data Structures and Algorithms taug
 18. Bitwise Operations
     - [Video xxx](xxx)
     - Code / Transcript / Key Points / Summary - [link](bitops/)
+19. Memory Leaks
+    - [Video xxx](xxx)
+    - Code / Transcript / Key Points / Summary - [link](memory/)
