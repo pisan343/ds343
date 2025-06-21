@@ -60,3 +60,17 @@ Videos, code and other resources for CSS 343 Data Structures and Algorithms taug
 19. Memory Leaks
     - [Video xxx](xxx)
     - Code / Transcript / Key Points / Summary - [link](memory/)
+20. Binary Trees
+    - [Video xxx](xxx)
+    - Code / Transcript / Key Points / Summary - [link](bintree/)
+20. Heap
+    - [Video xxx](xxx)
+    - Code / Transcript / Key Points / Summary - [link](heap/)
+21. Knapsack
+    - [Video xxx](xxx)
+    - Code / Transcript / Key Points / Summary - [link](knapsack/)
+22. Knuth-Morris-Pratt (KMP) algorithm for finding patterns
+    - [Video xxx](xxx)
+    - Code / Transcript / Key Points / Summary - [link](kmp/)
+
+
